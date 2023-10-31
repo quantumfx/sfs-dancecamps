@@ -5,6 +5,10 @@ body {
     margin: 40px;
 }
 
+img {
+    margin-bottom: 20px;
+}
+
 p, a, button, div, h1, h2, h3, h4, h5, ul, li {
     margin: 0;
 }
