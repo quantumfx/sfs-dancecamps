@@ -28,7 +28,25 @@ p, a, button, div, h1, h2, h3, h4, h5, ul, li {
 }
 
 .testing form input[type=password] {
-    margin-top: 8px;
+    margin-top: 4px;
+}
+
+.confirmation input[type=button][value=Back] {
+    background-color: #000;
+    color: #fff;
+    max-width: 250px;
+    width: 100%;
+    content: "Back | Retour";
+}
+
+.confirmation input[type=submit] {
+    max-width: 250px;
+    width: 100%;
+}
+
+form #sCostSummary div.sCostSummary:last-of-type .inputcell {
+    display: flex;
+    justify-content: stretch;
 }
 
 p, a, button, li, input, label, option, select {
