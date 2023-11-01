@@ -13,6 +13,24 @@ p, a, button, div, h1, h2, h3, h4, h5, ul, li {
     margin: 0;
 }
 
+.testing form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.testing .testinginfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.testing form input[type=submit] {
+    margin-top: 20px;
+}
+
+.testing form input[type=password] {
+    margin-top: 8px;
+}
+
 p, a, button, li, input, label, option, select {
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -88,7 +106,7 @@ input[type=button]:hover, input[type=submit]:hover {
     color: #fff;
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
     padding: 8px 12px;
     border-radius: 4px;
     font-size: 1rem;
@@ -96,7 +114,7 @@ input[type=text] {
     border-color: #000;
 }
 
-input[type=text]:focus-visible {
+input[type=text]:focus-visible, input[type=password]:focus-visible {
     outline-color: #d97f76;
 }
 
@@ -139,7 +157,7 @@ input[type=text], .inputcell, select {
 }
 
 @media screen and (max-width: 600px) {
-    .sectionWrapper {
+    .sectionWrapper, .testing form {
         width: 100%;
         margin: 0;
     }
