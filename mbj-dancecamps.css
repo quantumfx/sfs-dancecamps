@@ -162,6 +162,10 @@ input[type=text], input[type=password] {
     align-items: center;
 }
 
+#row_i119817_Terms {
+    margin-left: 8px;
+}
+
 #row_i119624_Booklet .itemdescriptioncell, #row_i119817_Terms .inputcell, #row_i119816_Tourisme .itemdescriptioncell {
     margin-bottom: 0;
 }
