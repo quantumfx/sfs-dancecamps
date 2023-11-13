@@ -142,8 +142,18 @@ input[type=text], input[type=password] {
     border-color: #000;
 }
 
+.fullpassdetails {
+    padding: 10px;
+    border: 2px dotted #000;
+    border-radius: 8px;
+}
+
+.fullpassdetails p {
+    margin-top: 8px;
+    text-align: center;
+}
+
 .fullpassdetails ul {
-    margin-bottom: 8px;
     margin-left: 8px;
     list-style: disc;
 }
@@ -269,6 +279,10 @@ input[type=text], .inputcell, select {
 }
 
 @media screen and (max-width: 450px) {
+    #bookingpage {
+        padding: 0;
+    }
+
     body {
         padding: 15px;
     }
@@ -279,5 +293,18 @@ input[type=text], .inputcell, select {
 
     .sectionHeader {
         font-size: 1.5rem;
+    }
+
+    .fullpassdetails {
+        border-left: none;
+        border-right: none;
+        padding: 8px 0;
+        border-radius: 0;
+    }
+
+    .errorMessage {
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
     }
 }
