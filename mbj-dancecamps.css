@@ -13,6 +13,16 @@ p, a, button, div, h1, h2, h3, h4, h5, ul, li {
     margin: 0;
 }
 
+a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 .testing form {
     max-width: 500px;
     margin: 0 auto;
@@ -42,29 +52,6 @@ p, a, button, div, h1, h2, h3, h4, h5, ul, li {
 .confirmation input[type=submit] {
     max-width: 250px;
     width: 100%;
-}
-
-.errorText {
-    color:  #cc0000;
-}
-
-.errorMessage {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    border: 2px solid  #cc0000;
-    padding: 12px 0;
-    margin-bottom: 12px;
-    border-radius: 4px;
-}
-
-.errorMessage .errorAlert::before {
-    content: "\a";
-    white-space: pre;
-}
-
-.itemdescriptioncell .errorText span p::before {
-    content: "* ";
 }
 
 form #sCostSummary div.sCostSummary:last-of-type .inputcell {
@@ -162,8 +149,18 @@ input[type=text], input[type=password] {
     align-items: center;
 }
 
-#row_i119817_Terms {
+#row_i119624_Booklet {
+    margin-bottom: 8px;
+}
+
+#row_i119817_Terms .itemdescriptioncell {
     margin-left: 8px;
+}
+
+#row_i119817_Terms p {
+    margin-bottom: 8px;
+    font-weight: normal;
+    line-height: 135%;
 }
 
 #row_i119624_Booklet .itemdescriptioncell, #row_i119817_Terms .inputcell, #row_i119816_Tourisme .itemdescriptioncell {
@@ -176,6 +173,29 @@ input[type=text], input[type=password] {
 
 input[type=text]:focus-visible, input[type=password]:focus-visible {
     outline-color: #d97f76;
+}
+
+.errorText {
+    color:  #cc0000;
+}
+
+.errorMessage {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid  #cc0000;
+    padding: 12px 0;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+
+.errorMessage .errorAlert::before {
+    content: "\a";
+    white-space: pre;
+}
+
+.itemdescriptioncell .errorText span p::before {
+    content: "* ";
 }
 
 select {
@@ -197,7 +217,7 @@ input[type=text], .inputcell, select {
     font-family: 'Caveat Brush', cursive;
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 16px;
+    margin: 32px 0 24px 0;
 }
 
 .fieldwrapper {
@@ -215,6 +235,17 @@ input[type=text], .inputcell, select {
 #bookingpage .fieldWrapper {
     margin-bottom: 20px;
 }
+
+.captioncell.informationInput p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 135%;
+}
+
+.captioncell.informationInput p:last-child {
+    margin-bottom: 16px;
+}
+
 
 @media screen and (max-width: 600px) {
     .sectionWrapper, .testing form {
