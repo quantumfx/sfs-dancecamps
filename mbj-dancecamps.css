@@ -142,6 +142,12 @@ input[type=text], input[type=password] {
     border-color: #000;
 }
 
+.fullpassdetails ul {
+    margin-bottom: 8px;
+    margin-left: 8px;
+    list-style: disc;
+}
+
 #row_i119624_Booklet, #row_i119817_Terms, #row_i119816_Tourisme {
     display: flex;
     flex-direction: row-reverse;
