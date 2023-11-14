@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+:root {
+    --dark: #000;
+    --neutral: #fff;
+    --primary: #008080;
+    --secondary: #d97f76;
+    --theme: var(--primary);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
 body {
     font-family: 'Josefin Sans', sans-serif;
     margin: 40px;
@@ -42,8 +54,8 @@ a:hover {
 }
 
 .confirmation input[type=button][value=Back] {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--dark);
+    color: var(--neutral);
     max-width: 250px;
     width: 100%;
     content: "Back | Retour";
@@ -118,7 +130,7 @@ li label {
 
 input[type=button], input[type=submit] {
     background: transparent;
-    border: 2px solid #000;
+    border: 2px solid var(--dark);
     padding: 8px 12px;
     border-radius: 40px;
     cursor: pointer;
@@ -129,9 +141,9 @@ input[type=submit] {
 }
 
 input[type=button]:hover, input[type=submit]:hover {
-    background: #d97f76;
-    border-color: #d97f76;
-    color: #fff;
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--neutral);
 }
 
 input[type=text], input[type=password] {
@@ -139,14 +151,14 @@ input[type=text], input[type=password] {
     border-radius: 4px;
     font-size: 1rem;
     border-style: solid;
-    border-color: #000;
+    border-color: var(--dark);
 }
 
-.fullpassdetails {
+/* .fullpassdetails {
     padding: 10px;
-    border: 2px dotted #000;
+    border: 2px dotted var(--dark);
     border-radius: 8px;
-}
+} */
 
 .fullpassdetails p {
     margin-top: 8px;
@@ -188,7 +200,7 @@ input[type=text], input[type=password] {
 }
 
 input[type=text]:focus-visible, input[type=password]:focus-visible {
-    outline-color: #d97f76;
+    outline-color: var(--secondary);
 }
 
 .errorText {
@@ -216,7 +228,7 @@ input[type=text]:focus-visible, input[type=password]:focus-visible {
 
 select {
     padding: 8px 12px;
-    border: 2px solid #000;
+    border: 2px solid var(--dark);
     border-radius: 4px;
 }
 
@@ -307,4 +319,86 @@ input[type=text], .inputcell, select {
         border-right: none;
         border-radius: 0;
     }
+}
+
+@keyframes bounce {
+    25% {
+        transform: rotate(90deg) translate(.25rem);
+    }
+    75% {
+        transform: rotate(90deg) translate(-.25rem);
+    }
+}
+
+
+/* ACCORDION COMPONENT */
+
+.tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.tab__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s;
+    padding: 0;
+}
+
+.tab input:checked ~ .tab__content {
+    max-height: fit-content;
+    padding-bottom: 20px;
+}
+
+.accordion {
+    color: var(--theme);
+    border: 2px solid;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.tab__label,
+.tab__close {
+    display: flex;
+    color: var(--neutral);
+    background: var(--theme);
+    cursor: pointer;
+}
+
+.tab__label {
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.tab__label::after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all 0.35s;
+}
+
+.tab input:checked + .tab__label::after {
+    transform: rotate(270deg);
+}
+
+.tab__content p {
+    margin: 0;
+    padding: 1rem;
+}
+
+.tab__close {
+    justify-content: flex-end;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+}
+
+.accordion--radio {
+    --theme: var(--primary);
+}
+
+.tab input:not(:checked) + .tab__label:hover::after {
+    animation: bounce .5s infinite;
 }
