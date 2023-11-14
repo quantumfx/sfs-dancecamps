@@ -221,7 +221,7 @@ input[type=button]:hover, input[type=submit]:hover {
 
 /* CUSTOM FIELDS STYLING */
 
-#row_i119624_Booklet, #row_i119817_Terms, #row_i119816_Tourisme {
+#row_i119624_Booklet, #row_i119817_Terms, #row_i119816_Tourisme, #row_i119873_Privacy {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -232,29 +232,29 @@ input[type=button]:hover, input[type=submit]:hover {
     margin-bottom: var(--spacing-sm);
 }
 
-#row_i119817_Terms .itemdescriptioncell {
+#row_i119817_Terms .itemdescriptioncell, #row_i119873_Privacy .itemdescriptioncell {
     margin-left: var(--spacing-sm);
 }
 
-#row_i119817_Terms p {
+#row_i119817_Terms p, #row_i119873_Privacy p {
     margin-bottom: var(--spacing-sm);
     font-weight: normal;
     line-height: 135%;
 }
 
-#row_i119624_Booklet .itemdescriptioncell, #row_i119817_Terms .inputcell, #row_i119816_Tourisme .itemdescriptioncell {
+#row_i119624_Booklet .itemdescriptioncell, #row_i119817_Terms .inputcell, #row_i119816_Tourisme .itemdescriptioncell, #row_i119873_Privacy .inputcell{
     margin-bottom: 0;
 }
 
-#row_i119624_Booklet .inputcell, #row_i119817_Terms .inputcell, #row_i119816_Tourisme .inputcell {
+#row_i119624_Booklet .inputcell, #row_i119817_Terms .inputcell, #row_i119816_Tourisme .inputcell, #row_i119873_Privacy .inputcell {
     width: 30px;
 }
 
-.confirmation #row_i119817_Terms .inputcell {
+.confirmation #row_i119817_Terms .inputcell, .confirmation #row_i119873_Privacy .inputcell {
     width: 25%;
 }
 
-.confirmation #row_i119817_Terms {
+.confirmation #row_i119817_Terms, .confirmation #row_i119873_Privacy  {
     gap: var(--spacing-sm);
 } 
 
