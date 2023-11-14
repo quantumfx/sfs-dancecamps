@@ -137,16 +137,6 @@ li label {
     text-align: center;
 }
 
-.fullpassdetails p {
-    margin-top: var(--spacing-sm);
-    text-align: center;
-}
-
-.fullpassdetails ul {
-    margin-left: var(--spacing-sm);
-    list-style: disc;
-}
-
 .sectionWrapper {
     width: 100%;
 }
@@ -328,6 +318,15 @@ input[type=button]:hover, input[type=submit]:hover {
 
 /* ACCORDION COMPONENT */
 
+.customdetails {
+    margin-bottom: var(--spacing-lg);
+}
+
+.customdetails ul {
+    margin-left: var(--spacing-sm);
+    list-style: disc;
+}
+
 .tab input {
     position: absolute;
     opacity: 0;
@@ -341,9 +340,18 @@ input[type=button]:hover, input[type=submit]:hover {
     padding: 0;
 }
 
+.tab__content-subtitle {
+    text-align: center;
+}
+
+.accordion .tab .tab__content p.tab__content-paragraph {
+    margin: var(--spacing-sm);
+    text-align: left;
+}
+
 .tab input:checked ~ .tab__content {
     max-height: fit-content;
-    padding-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
 }
 
 .accordion {
@@ -377,11 +385,6 @@ input[type=button]:hover, input[type=submit]:hover {
 
 .tab input:checked + .tab__label::after {
     transform: rotate(270deg);
-}
-
-.tab__content p {
-    margin: 0;
-    padding: var(--spacing-md);
 }
 
 .tab__close {
@@ -433,7 +436,7 @@ input[type=button]:hover, input[type=submit]:hover {
         font-size: var(--font-size-lg);
     }
 
-    .fullpassdetails {
+    .customdetails {
         border-left: none;
         border-right: none;
         padding: var(--spacing-sm) 0;
