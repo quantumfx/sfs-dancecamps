@@ -1,11 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
-    --dark: #000;
-    --neutral: #fff;
-    --primary: #008080;
-    --secondary: #d97f76;
-    --theme: var(--primary);
+    /* COLOR */
+    --color-dark: #000;
+    --color-neutral: #fff;
+    --color-primary: #008080;
+    --color-secondary: #d97f76;
+    --color-error: #cc0000;
+    --color-theme: var(--color-primary);
+
+    /* SPACING */
+    --spacing-xsm: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-sm-2: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.25rem;
+    --spacing-xl: 2.5rem;
+
+    /* BORDER */
+    --border-size: 2px;
+    --border-radius: var(--spacing-sm);
+    --border-radius-btn: var(--spacing-xl);
+    --border-input: var(--border-size) solid;
+
+    /* FONT-SIZE */
+    --font-size-sm: 0.75rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 2rem;
+    --font-size-xl: 3rem;
+
+    /* WIDTH */
+    --width-section: 500px;
+    --width-half: calc(var(--width-section) / 2);
 }
 
 *, *::before, *::after {
@@ -14,11 +40,11 @@
   
 body {
     font-family: 'Josefin Sans', sans-serif;
-    margin: 40px;
+    margin: var(--spacing-xl);
 }
 
 img {
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing-lg);
 }
 
 p, a, button, div, h1, h2, h3, h4, h5, ul, li {
@@ -28,41 +54,24 @@ p, a, button, div, h1, h2, h3, h4, h5, ul, li {
 a {
     text-decoration: underline;
     text-underline-offset: 3px;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: var(--border-size);
 }
 
 a:hover {
     text-decoration: none;
 }
 
-.testing form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.testing .testinginfo {
-    display: flex;
-    flex-direction: column;
-}
-
-.testing form input[type=submit] {
-    margin-top: 20px;
-}
-
-.testing form input[type=password] {
-    margin-top: 4px;
-}
 
 .confirmation input[type=button][value=Back] {
-    background-color: var(--dark);
-    color: var(--neutral);
-    max-width: 250px;
+    background-color: var(--color-dark);
+    color: var(--color-neutral);
+    max-width: var(--width-half);
     width: 100%;
     content: "Back | Retour";
 }
 
 .confirmation input[type=submit] {
-    max-width: 250px;
+    max-width: var(--width-half);
     width: 100%;
 }
 
@@ -77,36 +86,36 @@ p, a, button, li, input, label, option, select {
 
 ul {
     list-style: none;
-    padding-left: 20px;
+    padding-left: var(--spacing-lg);
 }
 
 li:not(:last-child) {
-    margin-bottom: 4px;
+    margin-bottom: var(--spacing-xsm);
 }
 
 li label {
-    margin-left: 8px;
+    margin-left: var(--spacing-sm);
 }
 
 #wrapperDiv {
-    padding: 40px;
+    padding: var(--spacing-xl);
 }
 
 #BodyTitle {
     font-family: 'Caveat Brush', cursive;
-    font-size: 3rem;
+    font-size: var(--font-size-xl);
     text-align: center;
-    margin: 8px;
+    margin: var(--spacing-sm);
 }
 
 #Introduction {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing-lg);
 }
 
 .sectionWrapper, #viewbookingoptions, #returntobookingbottom {
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: var(--width-section);
+    margin: var(--spacing-lg) auto;
 }
 
 #returntobooking br {
@@ -114,25 +123,99 @@ li label {
 }
 
 #viewbookingoptions, #returntobookingbottom {
-    margin: 40px auto;
+    margin: var(--spacing-xl) auto;
 }
 
 #returntobookingbottom, #returntobooking {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--spacing-sm);
 }
 
 #bookagain, .returntobooking {
-    margin-bottom: 8px;
+    margin-bottom: var(--spacing-sm);
     text-align: center;
 }
 
+.fullpassdetails p {
+    margin-top: var(--spacing-sm);
+    text-align: center;
+}
+
+.fullpassdetails ul {
+    margin-left: var(--spacing-sm);
+    list-style: disc;
+}
+
+.sectionWrapper {
+    width: 100%;
+}
+
+.sectionHeader {
+    font-family: 'Caveat Brush', cursive;
+    text-align: center;
+    font-size: var(--font-size-lg);
+    margin: var(--spacing-xl) 0 var(--spacing-lg) 0;
+}
+
+.fieldwrapper {
+    margin-bottom: var(--spacing-lg);
+}
+
+.itemdescriptioncell {
+    margin-bottom: var(--spacing-sm);
+}
+
+#bookingpage .itemdescriptioncell {
+    font-weight: bold;
+}
+
+#bookingpage .fieldWrapper {
+    margin-bottom: var(--spacing-lg);
+}
+
+.captioncell.informationInput p {
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-md);
+    line-height: 135%;
+}
+
+.captioncell.informationInput p:last-child {
+    margin-bottom: var(--spacing-md);
+}
+
+/* INPUT STYLING */
+
+input[type=text], input[type=password] {
+    padding: var(--spacing-sm) var(--spacing-sm-2);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+    border-style: solid;
+    border-color: var(--color-dark);
+}
+
+input[type=text]:focus-visible, input[type=password]:focus-visible {
+    outline-color: var(--color-secondary);
+}
+
+select {
+    padding: var(--spacing-sm) var(--spacing-sm-2);
+    border: var(--border-input)  var(--color-dark);
+    border-radius: var(--border-radius);
+}
+
+input[type=text], .inputcell, select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* BUTTON STYLING */
+
 input[type=button], input[type=submit] {
     background: transparent;
-    border: 2px solid var(--dark);
-    padding: 8px 12px;
-    border-radius: 40px;
+    border: var(--border-input) var(--color-dark);
+    padding: var(--spacing-sm) var(--spacing-sm-2);
+    border-radius: var(--border-radius-btn);
     cursor: pointer;
 }
 
@@ -141,34 +224,12 @@ input[type=submit] {
 }
 
 input[type=button]:hover, input[type=submit]:hover {
-    background: var(--secondary);
-    border-color: var(--secondary);
-    color: var(--neutral);
+    background: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-neutral);
 }
 
-input[type=text], input[type=password] {
-    padding: 8px 12px;
-    border-radius: 4px;
-    font-size: 1rem;
-    border-style: solid;
-    border-color: var(--dark);
-}
-
-/* .fullpassdetails {
-    padding: 10px;
-    border: 2px dotted var(--dark);
-    border-radius: 8px;
-} */
-
-.fullpassdetails p {
-    margin-top: 8px;
-    text-align: center;
-}
-
-.fullpassdetails ul {
-    margin-left: 8px;
-    list-style: disc;
-}
+/* CUSTOM FIELDS STYLING */
 
 #row_i119624_Booklet, #row_i119817_Terms, #row_i119816_Tourisme {
     display: flex;
@@ -178,15 +239,15 @@ input[type=text], input[type=password] {
 }
 
 #row_i119624_Booklet {
-    margin-bottom: 8px;
+    margin-bottom: var(--spacing-sm);
 }
 
 #row_i119817_Terms .itemdescriptioncell {
-    margin-left: 8px;
+    margin-left: var(--spacing-sm);
 }
 
 #row_i119817_Terms p {
-    margin-bottom: 8px;
+    margin-bottom: var(--spacing-sm);
     font-weight: normal;
     line-height: 135%;
 }
@@ -199,22 +260,32 @@ input[type=text], input[type=password] {
     width: 30px;
 }
 
-input[type=text]:focus-visible, input[type=password]:focus-visible {
-    outline-color: var(--secondary);
+.confirmation #row_i119817_Terms .inputcell {
+    width: 25%;
+}
+
+.confirmation #row_i119817_Terms {
+    gap: var(--spacing-sm);
+} 
+
+/* ERROR */
+
+.itemdescriptioncell .errorText span p::before {
+    content: "* ";
 }
 
 .errorText {
-    color:  #cc0000;
+    color:  var(--color-error);
 }
 
 .errorMessage {
-    max-width: 500px;
+    max-width: var(--width-section);
     margin: 0 auto;
     text-align: center;
-    border: 2px solid  #cc0000;
-    padding: 12px 0;
-    margin-bottom: 12px;
-    border-radius: 4px;
+    border: var(--border-input)  var(--color-error);
+    padding: var(--spacing-sm-2) 0;
+    margin-bottom: var(--spacing-sm-2);
+    border-radius: var(--border-radius);
 }
 
 .errorMessage .errorAlert::before {
@@ -222,104 +293,28 @@ input[type=text]:focus-visible, input[type=password]:focus-visible {
     white-space: pre;
 }
 
-.itemdescriptioncell .errorText span p::before {
-    content: "* ";
+/* TEST REGISTRATION PAGE */
+
+.testing form {
+    max-width: var(--width-section);
+    margin: 0 auto;
 }
 
-select {
-    padding: 8px 12px;
-    border: 2px solid var(--dark);
-    border-radius: 4px;
+.testing .testinginfo {
+    display: flex;
+    flex-direction: column;
 }
 
-input[type=text], .inputcell, select {
-    width: 100%;
-    box-sizing: border-box;
+.testing form input[type=submit] {
+    margin-top: var(--spacing-lg);
 }
 
-.sectionWrapper {
-    width: 100%;
+.testing form input[type=password] {
+    margin-top: var(--spacing-xsm);
 }
 
-.sectionHeader {
-    font-family: 'Caveat Brush', cursive;
-    text-align: center;
-    font-size: 2rem;
-    margin: 32px 0 24px 0;
-}
+/* KEYFRAMES */
 
-.fieldwrapper {
-    margin-bottom: 20px;
-}
-
-.itemdescriptioncell {
-    margin-bottom: 8px;
-}
-
-#bookingpage .itemdescriptioncell {
-    font-weight: bold;
-}
-
-#bookingpage .fieldWrapper {
-    margin-bottom: 20px;
-}
-
-.captioncell.informationInput p {
-    margin-bottom: 8px;
-    font-size: 14px;
-    line-height: 135%;
-}
-
-.captioncell.informationInput p:last-child {
-    margin-bottom: 16px;
-}
-
-
-@media screen and (max-width: 600px) {
-    .sectionWrapper, .testing form {
-        width: 100%;
-        margin: 0;
-    }
-
-    #viewbookingoptions, #returntobookingbottom {
-        margin: 40px 0;
-    }
-
-    .returntobooking {
-        line-break: anywhere;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    #bookingpage {
-        padding: 0;
-    }
-
-    body {
-        padding: 15px;
-    }
-
-    #BodyTitle {
-        font-size: 2rem;
-    }
-
-    .sectionHeader {
-        font-size: 1.5rem;
-    }
-
-    .fullpassdetails {
-        border-left: none;
-        border-right: none;
-        padding: 8px 0;
-        border-radius: 0;
-    }
-
-    .errorMessage {
-        border-left: none;
-        border-right: none;
-        border-radius: 0;
-    }
-}
 
 @keyframes bounce {
     25% {
@@ -348,27 +343,27 @@ input[type=text], .inputcell, select {
 
 .tab input:checked ~ .tab__content {
     max-height: fit-content;
-    padding-bottom: 20px;
+    padding-bottom: var(--spacing-lg);
 }
 
 .accordion {
-    color: var(--theme);
-    border: 2px solid;
-    border-radius: 0.5rem;
+    color: var(--color-theme);
+    border: var(--border-input);
+    border-radius: var(--border-radius);
     overflow: hidden;
 }
 
 .tab__label,
 .tab__close {
     display: flex;
-    color: var(--neutral);
-    background: var(--theme);
+    color: var(--color-neutral);
+    background: var(--color-theme);
     cursor: pointer;
 }
 
 .tab__label {
     justify-content: space-between;
-    padding: 1rem;
+    padding: var(--spacing-md);
 }
 
 .tab__label::after {
@@ -386,19 +381,68 @@ input[type=text], .inputcell, select {
 
 .tab__content p {
     margin: 0;
-    padding: 1rem;
+    padding: var(--spacing-md);
 }
 
 .tab__close {
     justify-content: flex-end;
-    padding: 0.5rem 1rem;
-    font-size: 0.75rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
 }
 
 .accordion--radio {
-    --theme: var(--primary);
+    --color-theme: var(--color-primary);
 }
 
 .tab input:not(:checked) + .tab__label:hover::after {
     animation: bounce .5s infinite;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 600px) {
+    .sectionWrapper, .testing form {
+        width: 100%;
+        margin: 0;
+    }
+
+    #viewbookingoptions, #returntobookingbottom {
+        margin: var(--spacing-xl) 0;
+    }
+
+    .returntobooking {
+        line-break: anywhere;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #bookingpage {
+        padding: 0;
+    }
+
+    body {
+        padding: var(--spacing-md);
+    }
+
+    #BodyTitle {
+        font-size: var(--font-size-lg);
+    }
+
+    .sectionHeader {
+        font-size: var(--font-size-lg);
+    }
+
+    .fullpassdetails {
+        border-left: none;
+        border-right: none;
+        padding: var(--spacing-sm) 0;
+        border-radius: 0;
+    }
+
+    .errorMessage {
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+    }
 }
