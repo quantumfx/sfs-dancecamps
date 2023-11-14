@@ -325,6 +325,7 @@ input[type=button]:hover, input[type=submit]:hover {
 .customdetails ul {
     margin-left: var(--spacing-sm);
     list-style: disc;
+    margin-bottom: var(--spacing-sm);
 }
 
 .tab input {
