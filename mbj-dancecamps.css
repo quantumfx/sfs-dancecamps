@@ -523,6 +523,12 @@ input[type=submit]:hover {
     animation: bounce .5s infinite;
 }
 
+.tab__content-item-list {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
 
 /* RESPONSIVE */
 
@@ -572,5 +578,11 @@ input[type=submit]:hover {
         border-left: none;
         border-right: none;
         border-radius: 0;
+    }
+
+    .tab__content-item-list {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
     }
 }
