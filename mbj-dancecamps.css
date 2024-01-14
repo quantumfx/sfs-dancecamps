@@ -316,6 +316,7 @@ input[type=submit]:hover {
 .link-container {
     text-align: center;
     padding: 0.5rem 1rem;
+    line-height: 150%;
 }
 
 #row_i119817_Terms,
