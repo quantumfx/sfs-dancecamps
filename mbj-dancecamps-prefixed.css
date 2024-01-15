@@ -640,6 +640,10 @@ input[type=submit]:hover {
         padding: 0;
     }
 
+    #wrapperDiv {
+        padding: 0;
+    }
+
     body {
         padding: var(--spacing-md);
     }
