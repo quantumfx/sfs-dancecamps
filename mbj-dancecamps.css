@@ -21,7 +21,7 @@
     --border-size: 2px;
     --border-radius: var(--spacing-sm);
     --border-radius-inner: var(--spacing-xsm);
-    --border-radius-btn: var(--spacing-xl);
+    --border-radius-btn: var(--spacing-xsm);
     --border-input: var(--border-size) solid;
 
     /* FONT-SIZE */
@@ -33,6 +33,11 @@
     /* WIDTH */
     --width-section: 500px;
     --width-half: calc(var(--width-section) / 2);
+
+    /* EFFECTS */
+    --transition: all 200ms ease-in-out;
+    --translate-y: translateY(-2px);
+    --box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
 }
 
 *,
@@ -74,18 +79,27 @@ a:hover {
     text-decoration: none;
 }
 
-
 .confirmation input[type=button][value=Back] {
     background-color: var(--color-dark);
     color: var(--color-neutral);
     max-width: var(--width-half);
     width: 100%;
     content: "Back | Retour";
+    transition: var(--transition);
+}
+
+.confirmation input[type=button][value=Back]:hover,
+.confirmation input[type=submit]:hover,
+.testing form input[type=submit]:hover {
+    transform: var(--translate-y);
+    box-shadow: var(--box-shadow);
 }
 
 .confirmation input[type=submit] {
+    color: var(--color-dark);
     max-width: var(--width-half);
     width: 100%;
+    transition: var(--transition);
 }
 
 form #sCostSummary div.sCostSummary:last-of-type .inputcell {
@@ -131,6 +145,10 @@ li label {
 #Introduction {
     text-align: center;
     margin-bottom: var(--spacing-lg);
+}
+
+#Introduction img {
+    animation: wiggle 5s linear infinite;
 }
 
 .sectionWrapper,
@@ -274,10 +292,13 @@ input[type=submit] {
     padding: var(--spacing-sm) var(--spacing-sm-2);
     border-radius: var(--border-radius-btn);
     cursor: pointer;
+    transition: var(--transition);
 }
 
 input[type=submit] {
+    color: var(--color-dark);
     width: 100%;
+    transition: var(--transition);
 }
 
 input[type=button]:hover,
@@ -285,6 +306,8 @@ input[type=submit]:hover {
     background: var(--color-secondary);
     border-color: var(--color-secondary);
     color: var(--color-neutral);
+    transform: var(--translate-y);
+    box-shadow: var(--box-shadow);
 }
 
 /* CUSTOM FIELDS STYLING */
@@ -425,6 +448,7 @@ input[type=submit]:hover {
 }
 
 .testing form input[type=submit] {
+    color: var(--color-dark);
     margin-top: var(--spacing-lg);
 }
 
@@ -442,6 +466,39 @@ input[type=submit]:hover {
 
     75% {
         transform: rotate(90deg) translate(-.25rem);
+    }
+}
+
+@keyframes wiggle {
+
+    0%,
+    7% {
+        transform: rotateZ(0);
+    }
+
+    15% {
+        transform: rotateZ(-15deg);
+    }
+
+    20% {
+        transform: rotateZ(10deg);
+    }
+
+    25% {
+        transform: rotateZ(-10deg);
+    }
+
+    30% {
+        transform: rotateZ(6deg);
+    }
+
+    35% {
+        transform: rotateZ(-4deg);
+    }
+
+    40%,
+    100% {
+        transform: rotateZ(0);
     }
 }
 
@@ -567,6 +624,10 @@ input[type=submit]:hover {
 
 @media screen and (max-width: 450px) {
     #bookingpage {
+        padding: 0;
+    }
+
+    #wrapperDiv {
         padding: 0;
     }
 
