@@ -163,6 +163,10 @@ li label {
     animation: wiggle 5s linear infinite;
 }
 
+#Introduction p {
+    margin-bottom: var(--spacing-sm);
+}
+
 .sectionWrapper,
 #viewbookingoptions,
 #returntobookingbottom,
