@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
     /* COLOR */
@@ -10,7 +10,7 @@
     --color-theme: var(--color-primary);
 
     /* FONT FAMILY */
-    --font-family-title: "Lemonada", cursive;
+    --font-family-title: "Lemon", serif;
     --font-family-body: "Rubik", sans-serif;
 
     /* SPACING */
