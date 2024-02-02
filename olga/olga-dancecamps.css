@@ -449,7 +449,8 @@ input[type=submit]:hover {
     content: "* ";
 }
 
-.errorText {
+.errorText,
+.errorText p {
     color: var(--color-error) !important;
 }
 
