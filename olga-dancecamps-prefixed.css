@@ -48,6 +48,7 @@
 *,
 *::before,
 *::after {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -91,13 +92,18 @@ a:hover {
     max-width: var(--width-half);
     width: 100%;
     content: "Back | Retour";
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 
 .confirmation input[type=button][value=Back]:hover,
 .confirmation input[type=submit]:hover,
 .testing form input[type=submit]:hover {
+    -webkit-transform: var(--translate-y);
+    -ms-transform: var(--translate-y);
     transform: var(--translate-y);
+    -webkit-box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);
 }
 
@@ -105,11 +111,17 @@ a:hover {
     color: var(--color-dark);
     max-width: var(--width-half);
     width: 100%;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 
 form #sCostSummary div.sCostSummary:last-of-type .inputcell {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: stretch;
+    -ms-flex-pack: stretch;
     justify-content: stretch;
 }
 
@@ -153,6 +165,7 @@ li label {
 }
 
 #Introduction img {
+    -webkit-animation: wiggle 5s linear infinite;
     animation: wiggle 5s linear infinite;
 }
 
@@ -180,7 +193,12 @@ li label {
 
 #returntobookingbottom,
 #returntobooking {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: var(--spacing-sm);
 }
@@ -306,6 +324,7 @@ input[type=text],
 .inputcell,
 select {
     width: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -318,12 +337,16 @@ input[type=submit] {
     padding: var(--spacing-sm) var(--spacing-sm-2);
     border-radius: var(--border-radius-btn);
     cursor: pointer;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 
 input[type=submit] {
     color: var(--color-dark);
     width: 100%;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 
@@ -332,7 +355,10 @@ input[type=submit]:hover {
     background: var(--color-secondary);
     border-color: var(--color-secondary);
     color: var(--color-neutral);
+    -webkit-transform: var(--translate-y);
+    -ms-transform: var(--translate-y);
     transform: var(--translate-y);
+    -webkit-box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);
 }
 
@@ -375,13 +401,24 @@ input[type=submit]:hover {
 #row_i119921_Allergies,
 #row_i119919_Timeframe,
 #row_i120576_Confirmation {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 #row_i119919_Timeframe[style='display: block;'] {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
 }
 
@@ -416,7 +453,11 @@ input[type=submit]:hover {
 #row_i119921_Allergies .itemdescriptioncell span p,
 #row_i119919_Timeframe .itemdescriptioncell span p {
     height: var(--spacing-lg);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -474,7 +515,12 @@ input[type=submit]:hover {
 }
 
 .testing .testinginfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
@@ -490,13 +536,68 @@ input[type=submit]:hover {
 /* KEYFRAMES */
 
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
     25% {
+        -webkit-transform: rotate(90deg) translate(.25rem);
         transform: rotate(90deg) translate(.25rem);
     }
 
     75% {
+        -webkit-transform: rotate(90deg) translate(-.25rem);
         transform: rotate(90deg) translate(-.25rem);
+    }
+}
+
+
+@keyframes bounce {
+    25% {
+        -webkit-transform: rotate(90deg) translate(.25rem);
+        transform: rotate(90deg) translate(.25rem);
+    }
+
+    75% {
+        -webkit-transform: rotate(90deg) translate(-.25rem);
+        transform: rotate(90deg) translate(-.25rem);
+    }
+}
+
+@-webkit-keyframes wiggle {
+
+    0%,
+    7% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    15% {
+        -webkit-transform: rotateZ(-15deg);
+        transform: rotateZ(-15deg);
+    }
+
+    20% {
+        -webkit-transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
+    }
+
+    25% {
+        -webkit-transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg);
+    }
+
+    30% {
+        -webkit-transform: rotateZ(6deg);
+        transform: rotateZ(6deg);
+    }
+
+    35% {
+        -webkit-transform: rotateZ(-4deg);
+        transform: rotateZ(-4deg);
+    }
+
+    40%,
+    100% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
     }
 }
 
@@ -504,31 +605,38 @@ input[type=submit]:hover {
 
     0%,
     7% {
+        -webkit-transform: rotateZ(0);
         transform: rotateZ(0);
     }
 
     15% {
+        -webkit-transform: rotateZ(-15deg);
         transform: rotateZ(-15deg);
     }
 
     20% {
+        -webkit-transform: rotateZ(10deg);
         transform: rotateZ(10deg);
     }
 
     25% {
+        -webkit-transform: rotateZ(-10deg);
         transform: rotateZ(-10deg);
     }
 
     30% {
+        -webkit-transform: rotateZ(6deg);
         transform: rotateZ(6deg);
     }
 
     35% {
+        -webkit-transform: rotateZ(-4deg);
         transform: rotateZ(-4deg);
     }
 
     40%,
     100% {
+        -webkit-transform: rotateZ(0);
         transform: rotateZ(0);
     }
 }
@@ -555,6 +663,8 @@ input[type=submit]:hover {
 .tab__content {
     max-height: 0;
     overflow: hidden;
+    -webkit-transition: all 0.35s;
+    -o-transition: all 0.35s;
     transition: all 0.35s;
     padding: 0;
 }
@@ -575,6 +685,8 @@ input[type=submit]:hover {
 }
 
 .tab input:checked~.tab__content {
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
     max-height: fit-content;
     padding: var(--spacing-md);
 }
@@ -588,6 +700,8 @@ input[type=submit]:hover {
 
 .tab__label,
 .tab__close {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     color: var(--color-neutral);
     background: var(--color-theme);
@@ -595,6 +709,8 @@ input[type=submit]:hover {
 }
 
 .tab__label {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: var(--spacing-md);
 }
@@ -604,15 +720,23 @@ input[type=submit]:hover {
     width: 1em;
     height: 1em;
     text-align: center;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+    -webkit-transition: all 0.35s;
+    -o-transition: all 0.35s;
     transition: all 0.35s;
 }
 
 .tab input:checked+.tab__label::after {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
     transform: rotate(270deg);
 }
 
 .tab__close {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     padding: var(--spacing-sm) var(--spacing-md);
     font-size: var(--font-size-sm);
@@ -623,6 +747,7 @@ input[type=submit]:hover {
 }
 
 .tab input:not(:checked)+.tab__label:hover::after {
+    -webkit-animation: bounce .5s infinite;
     animation: bounce .5s infinite;
 }
 
