@@ -78,6 +78,9 @@ li {
 }
 
 a {
+    color: var(--color-secondary);
+    -webkit-text-decoration-color: var(--color-secondary);
+    text-decoration-color: var(--color-secondary);
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: var(--border-size);
