@@ -33,6 +33,7 @@
     --font-size-md: 1rem;
     --font-size-md-2: 1.5rem;
     --font-size-lg: 2rem;
+    --font-size-lg-2: 2.5rem;
     --font-size-xl: 3rem;
 
     /* WIDTH */
@@ -155,7 +156,7 @@ li label {
 
 #BodyTitle {
     font-family: var(--font-family-title);
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg-2);
     font-weight: bold;
     text-align: center;
 }
@@ -367,7 +368,6 @@ input[type=submit]:hover {
 
 .coupon-feedback {
     background-color: var(--color-secondary);
-    color: var(--color-neutral);
     border-radius: var(--border-radius);
     padding: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
@@ -375,6 +375,7 @@ input[type=submit]:hover {
 
 .coupon-feedback p {
     text-align: center;
+    color: var(--color-neutral);
     margin-bottom: 0 !important;
 }
 
