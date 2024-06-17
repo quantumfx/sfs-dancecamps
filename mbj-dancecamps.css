@@ -253,10 +253,6 @@ textarea:focus-visible {
 	outline-color: var(--color-secondary);
 }
 
-input[name='override'] {
-	margin-bottom: var(--spacing-md);
-}
-
 select {
 	padding: var(--spacing-sm) var(--spacing-sm-2);
 	border: var(--border-input) var(--color-dark);
