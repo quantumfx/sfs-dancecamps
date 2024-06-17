@@ -141,7 +141,8 @@ li label {
 	text-align: center;
 }
 
-#Introduction {
+#Introduction,
+#BookingsClosedText {
 	text-align: center;
 	margin-bottom: var(--spacing-lg);
 }
@@ -150,7 +151,8 @@ li label {
 	animation: wiggle 5s linear infinite;
 }
 
-#Introduction p {
+#Introduction p,
+#BookingsClosedText p {
 	margin-bottom: var(--spacing-sm);
 }
 
@@ -289,6 +291,7 @@ select[multiple='multiple'] option:last-child {
 }
 
 input[type='text'],
+input[name='override'],
 .inputcell,
 select {
 	width: 100%;
