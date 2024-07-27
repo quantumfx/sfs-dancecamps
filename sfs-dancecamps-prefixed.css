@@ -5,15 +5,15 @@
 * Browsers: last 4 version
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap');
 
 :root {
 	/* COLOR */
 	--color-dark: #000;
-	--color-neutral: #fff;
-	--color-primary: #008080;
-	--color-secondary: #d97f76;
-	--color-error: #cc0000;
+	--color-neutral: #606060;
+	--color-primary: #ff8738;
+	--color-secondary: #0077c7;
+	--color-error: red;
 	--color-theme: var(--color-primary);
 
 	/* SPACING */
@@ -51,11 +51,11 @@
 *::before,
 *::after {
 	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 body {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	margin: var(--spacing-xl);
 }
 
@@ -102,10 +102,10 @@ a:hover {
 .confirmation input[type='submit']:hover,
 .testing form input[type='submit']:hover {
 	-webkit-transform: var(--translate-y);
-	-ms-transform: var(--translate-y);
-	transform: var(--translate-y);
+	    -ms-transform: var(--translate-y);
+	        transform: var(--translate-y);
 	-webkit-box-shadow: var(--box-shadow);
-	box-shadow: var(--box-shadow);
+	        box-shadow: var(--box-shadow);
 }
 
 .confirmation input[type='submit'] {
@@ -122,8 +122,8 @@ form #sCostSummary div.sCostSummary:last-of-type .inputcell {
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: stretch;
-	-ms-flex-pack: stretch;
-	justify-content: stretch;
+	    -ms-flex-pack: stretch;
+	        justify-content: stretch;
 }
 
 p,
@@ -134,7 +134,7 @@ input,
 label,
 option,
 select {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 ul {
@@ -155,9 +155,10 @@ li label {
 }
 
 #BodyTitle {
-	font-family: 'Caveat Brush', cursive;
+	font-family: 'Sriracha', cursive;
 	font-size: var(--font-size-xl);
 	text-align: center;
+	color: var(--color-primary);
 }
 
 #Introduction,
@@ -166,10 +167,9 @@ li label {
 	margin-bottom: var(--spacing-lg);
 }
 
-#Introduction img {
-	-webkit-animation: wiggle 5s linear infinite;
+/* #Introduction img {
 	animation: wiggle 5s linear infinite;
-}
+} */
 
 #Introduction p,
 #BookingsClosedText p {
@@ -202,8 +202,8 @@ li label {
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	gap: var(--spacing-sm);
 }
 
@@ -218,10 +218,11 @@ li label {
 }
 
 .sectionHeader {
-	font-family: 'Caveat Brush', cursive;
+	font-family: 'Sriracha', cursive;
 	text-align: center;
 	font-size: var(--font-size-lg);
 	margin: var(--spacing-xl) 0 var(--spacing-lg) 0;
+	color: var(--color-primary);
 }
 
 .fieldwrapper {
@@ -269,6 +270,7 @@ textarea {
 	font-size: var(--font-size-md);
 	border-style: solid;
 	border-color: var(--color-dark);
+	color: var(--color-secondary)
 }
 
 input[type='text']:focus-visible,
@@ -317,7 +319,7 @@ input[name='override'],
 select {
 	width: 100%;
 	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 /* BUTTON STYLING */
@@ -348,10 +350,10 @@ input[type='submit']:hover {
 	border-color: var(--color-secondary);
 	color: var(--color-neutral);
 	-webkit-transform: var(--translate-y);
-	-ms-transform: var(--translate-y);
-	transform: var(--translate-y);
+	    -ms-transform: var(--translate-y);
+	        transform: var(--translate-y);
 	-webkit-box-shadow: var(--box-shadow);
-	box-shadow: var(--box-shadow);
+	        box-shadow: var(--box-shadow);
 }
 
 /* CUSTOM FIELDS STYLING */
@@ -398,14 +400,14 @@ input[type='submit']:hover {
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: reverse;
-	-ms-flex-direction: row-reverse;
-	flex-direction: row-reverse;
+	    -ms-flex-direction: row-reverse;
+	        flex-direction: row-reverse;
 	-webkit-box-pack: end;
-	-ms-flex-pack: end;
-	justify-content: flex-end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 #row_i119919_Timeframe[style='display: block;'] {
@@ -449,8 +451,8 @@ input[type='submit']:hover {
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 #row_i119817_Terms .inputcell,
@@ -511,8 +513,8 @@ input[type='submit']:hover {
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
 .testing form input[type='submit'] {
@@ -529,24 +531,24 @@ input[type='submit']:hover {
 @-webkit-keyframes bounce {
 	25% {
 		-webkit-transform: rotate(90deg) translate(0.25rem);
-		transform: rotate(90deg) translate(0.25rem);
+		        transform: rotate(90deg) translate(0.25rem);
 	}
 
 	75% {
 		-webkit-transform: rotate(90deg) translate(-0.25rem);
-		transform: rotate(90deg) translate(-0.25rem);
+		        transform: rotate(90deg) translate(-0.25rem);
 	}
 }
 
 @keyframes bounce {
 	25% {
 		-webkit-transform: rotate(90deg) translate(0.25rem);
-		transform: rotate(90deg) translate(0.25rem);
+		        transform: rotate(90deg) translate(0.25rem);
 	}
 
 	75% {
 		-webkit-transform: rotate(90deg) translate(-0.25rem);
-		transform: rotate(90deg) translate(-0.25rem);
+		        transform: rotate(90deg) translate(-0.25rem);
 	}
 }
 
@@ -554,38 +556,38 @@ input[type='submit']:hover {
 	0%,
 	7% {
 		-webkit-transform: rotateZ(0);
-		transform: rotateZ(0);
+		        transform: rotateZ(0);
 	}
 
 	15% {
 		-webkit-transform: rotateZ(-15deg);
-		transform: rotateZ(-15deg);
+		        transform: rotateZ(-15deg);
 	}
 
 	20% {
 		-webkit-transform: rotateZ(10deg);
-		transform: rotateZ(10deg);
+		        transform: rotateZ(10deg);
 	}
 
 	25% {
 		-webkit-transform: rotateZ(-10deg);
-		transform: rotateZ(-10deg);
+		        transform: rotateZ(-10deg);
 	}
 
 	30% {
 		-webkit-transform: rotateZ(6deg);
-		transform: rotateZ(6deg);
+		        transform: rotateZ(6deg);
 	}
 
 	35% {
 		-webkit-transform: rotateZ(-4deg);
-		transform: rotateZ(-4deg);
+		        transform: rotateZ(-4deg);
 	}
 
 	40%,
 	100% {
 		-webkit-transform: rotateZ(0);
-		transform: rotateZ(0);
+		        transform: rotateZ(0);
 	}
 }
 
@@ -593,38 +595,38 @@ input[type='submit']:hover {
 	0%,
 	7% {
 		-webkit-transform: rotateZ(0);
-		transform: rotateZ(0);
+		        transform: rotateZ(0);
 	}
 
 	15% {
 		-webkit-transform: rotateZ(-15deg);
-		transform: rotateZ(-15deg);
+		        transform: rotateZ(-15deg);
 	}
 
 	20% {
 		-webkit-transform: rotateZ(10deg);
-		transform: rotateZ(10deg);
+		        transform: rotateZ(10deg);
 	}
 
 	25% {
 		-webkit-transform: rotateZ(-10deg);
-		transform: rotateZ(-10deg);
+		        transform: rotateZ(-10deg);
 	}
 
 	30% {
 		-webkit-transform: rotateZ(6deg);
-		transform: rotateZ(6deg);
+		        transform: rotateZ(6deg);
 	}
 
 	35% {
 		-webkit-transform: rotateZ(-4deg);
-		transform: rotateZ(-4deg);
+		        transform: rotateZ(-4deg);
 	}
 
 	40%,
 	100% {
 		-webkit-transform: rotateZ(0);
-		transform: rotateZ(0);
+		        transform: rotateZ(0);
 	}
 }
 
@@ -696,8 +698,8 @@ input[type='submit']:hover {
 
 .tab__label {
 	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	padding: var(--spacing-md);
 }
 
@@ -707,8 +709,8 @@ input[type='submit']:hover {
 	height: 1em;
 	text-align: center;
 	-webkit-transform: rotate(90deg);
-	-ms-transform: rotate(90deg);
-	transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	        transform: rotate(90deg);
 	-webkit-transition: all 0.35s;
 	-o-transition: all 0.35s;
 	transition: all 0.35s;
@@ -716,14 +718,14 @@ input[type='submit']:hover {
 
 .tab input:checked + .tab__label::after {
 	-webkit-transform: rotate(270deg);
-	-ms-transform: rotate(270deg);
-	transform: rotate(270deg);
+	    -ms-transform: rotate(270deg);
+	        transform: rotate(270deg);
 }
 
 .tab__close {
 	-webkit-box-pack: end;
-	-ms-flex-pack: end;
-	justify-content: flex-end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 	padding: var(--spacing-sm) var(--spacing-md);
 	font-size: var(--font-size-sm);
 }
@@ -734,7 +736,7 @@ input[type='submit']:hover {
 
 .tab input:not(:checked) + .tab__label:hover::after {
 	-webkit-animation: bounce 0.5s infinite;
-	animation: bounce 0.5s infinite;
+	        animation: bounce 0.5s infinite;
 }
 
 .tab__content-item-list {
