@@ -1,0 +1,52 @@
+<!-- PROPERTIES: ID, NAME and FOR MUST BE UNIQUE TO THE ACCORDION  -->
+<!-- If two accordions have the same id or name, both will open on click. -->
+
+<!-- Accordion Component -->
+<div class="customdetails">
+	<div class="accordion">
+		<div class="tab">
+			<input type="checkbox" name="accordion-1" id="cb1" />
+			<label for="cb1" class="tab__label">Title</label>
+			<div class="tab__content">
+				<p class="tab__content-subtitle">
+					<strong>Subtitle</strong>
+				</p>
+				<p class="tab__content-paragraph">Paragraph</p>
+				<ul class="tab__content-item-list">
+					<li>List item</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Multiple Tabs Accordion -->
+<div class="customdetails">
+	<div class="accordion">
+		<div class="tab">
+			<!-- checked="" means it will be open by default -->
+			<input type="checkbox" name="accordion-1" id="cb1" checked="" />
+			<label for="cb1" class="tab__label">Title 1</label>
+			<div class="tab__content">
+				<p class="tab__content-subtitle"><strong>Subtitle</strong></p>
+				<p class="tab__content-paragraph">Paragraph</p>
+			</div>
+			<div class="tab">
+				<input type="checkbox" name="accordion-2" id="cb2" />
+				<label for="cb2" class="tab__label">Title 2</label>
+				<div class="tab__content">
+					<p class="tab__content-subtitle"><strong>Subtitle</strong></p>
+					<p class="tab__content-paragraph">Paragraph</p>
+				</div>
+			</div>
+			<div class="tab">
+				<input type="checkbox" name="accordion-3" id="cb3" />
+				<label for="cb3" class="tab__label">Title 3</label>
+				<div class="tab__content">
+					<p class="tab__content-subtitle"><strong>Subtitle</strong></p>
+					<p class="tab__content-paragraph">Content</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
